@@ -79,6 +79,7 @@ let pcScore = 0;
         if (output === 0) {
             urScore;
             pcScore;
+            i--;
         }
         else if (output === 1) {
             urScore++;
