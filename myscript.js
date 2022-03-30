@@ -30,16 +30,15 @@ function computerPlay() {
 
 function playRound(playerSelection, computerSelection) {
     computerSelection = computerPlay();
-    playerSelection = questionAsk();
+    playerSelection = buttonStorage();
     let output = '';
     let score = '';
     let noScore = 0;
     let homeScore = 1;
     let oppScore = 2;
 
-
     if (playerSelection === computerSelection) {
-        output = "You both chose " + playerSelection + " please try again."; 
+        output = "You both chose " + playerSelection + " please try again.";
         score = noScore;
     }
     else if (playerSelection === 'rock' && computerSelection === 'scissors') {
@@ -71,8 +70,8 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {
-let urScore = 0;
-let pcScore = 0;
+    let urScore = 0;
+    let pcScore = 0;
 
 
     if (urScore === pcScore) {
@@ -87,6 +86,22 @@ let pcScore = 0;
 
 }
 
-
+function buttonStorage() {
+    let btn = document.createElement("button");
+    let btn2 = document.createElement("button");
+    let btn3 = document.createElement("button");
+    btn.textContent = 'Rock';
+    btn2.textContent = 'Paper';
+    btn3.textContent = 'Scissors';
+    btn.addEventListener("click", function() {
+        playRound("rock");
+    });
+    btn2.addEventListener("click", function() {
+        playRound("paper");
+    });
+    btn3.addEventListener("click", function() {
+        playRound("scissors");
+    });
+}
 
 console.log(game());
