@@ -74,22 +74,6 @@ function game() {
 let urScore = 0;
 let pcScore = 0;
 
-    for (let i = 0; i < 5; i++) {
-        let output = (playRound(playerSelection, computerSelection));
-        if (output === 0) {
-            urScore;
-            pcScore;
-            i--;
-        }
-        else if (output === 1) {
-            urScore++;
-        }
-        else if (output === 2) {
-            pcScore++;
-        }
-
-        console.log("Your score: " + urScore + " Computer score: " + pcScore);
-    }
 
     if (urScore === pcScore) {
         console.log("It's a tie!");
